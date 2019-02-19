@@ -19,5 +19,5 @@ steps:
     versionSpec: $(node_version)
     checkLatest: true
 
-- script: yarn install --production
+- script: yarn
 - script: yarn all-check
