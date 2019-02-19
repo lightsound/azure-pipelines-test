@@ -13,7 +13,7 @@ strategy:
     node_11_x:
       node_version: 11.x
     node_latest_x:
-      node_version: >=11.x
+      node_version: ">=11.x"
 
 steps:
 - task: NodeTool@0 
