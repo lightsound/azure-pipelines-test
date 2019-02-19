@@ -13,11 +13,11 @@ steps:
 - script: node -v && npm -v
   displayName: 'Check node & npm versions'
 
-- script: npm i
+- script: yarn
   displayName: 'Install packages'
 
-- script: npm run all-check
+- script: yarn all-check
   displayName: 'Test, Lint, TSC'
 
-- script: npm run rollup && npm run build
+- script: yarn rollup && yarn build
   displayName: 'Build'
