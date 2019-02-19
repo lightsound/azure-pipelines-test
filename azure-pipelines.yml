@@ -28,5 +28,5 @@ steps:
 - script: yarn all-check
   displayName: 'Test, Lint, TSC'
 
-- script: yarn build
+- script: yarn rollup && yarn build
   displayName: 'Build'
