@@ -8,10 +8,25 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-16.04'
+strategy:
+  matrix:
+    node_latest_x:
+      node_version: ">=11.x"
 
 steps:
+- task: NodeTool@0 
+  inputs:
+    versionSpec: $(node_version)
+    checkLatest: true
+
+- script: node -v && npm -v
+  displayName: 'Check node & npm versions'
+
 - script: yarn
   displayName: 'Install packages'
 
 - script: yarn all-check
   displayName: 'Test, Lint, TSC'
+
+- script: yarn build
+  displayName: 'Build'
