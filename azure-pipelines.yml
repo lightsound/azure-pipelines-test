@@ -10,8 +10,8 @@ pool:
   vmImage: 'ubuntu-16.04'
 strategy:
   matrix:
-    node_11_x:
-      node_version: 11.x
+    node_10_x:
+      node_version: 10.x
     node_latest_x:
       node_version: ">=11.x"
 
