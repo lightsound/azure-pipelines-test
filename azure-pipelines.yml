@@ -10,24 +10,6 @@ pool:
   vmImage: 'ubuntu-16.04'
 strategy:
   matrix:
-    node_3_x:
-      node_version: 3.x
-    node_4_x:
-      node_version: 4.x
-    node_5_x:
-      node_version: 5.x
-    node_6_x:
-      node_version: 6.x
-    node_7_x:
-      node_version: 7.x
-    node_8_x:
-      node_version: 8.x
-    node_9_x:
-      node_version: 9.x
-    node_10_x:
-      node_version: 10.x
-    node_11_x:
-      node_version: 11.x
     node_latest_x:
       node_version: ">=11.x"
 
@@ -40,11 +22,11 @@ steps:
 - script: node -v && npm -v
   displayName: 'Check node & npm versions'
 
-- script: yarn
+- script: npm i
   displayName: 'Install packages'
 
-- script: yarn all-check
+- script: npm run all-check
   displayName: 'Test, Lint, TSC'
 
-- script: yarn rollup && yarn build
+- script: npm run rollup && npm run build
   displayName: 'Build'
