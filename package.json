@@ -1,6 +1,6 @@
 {
   "name": "react-greeting",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "This is a simple component only just display 'Hello, foo'",
   "keywords": [
     "react",
