@@ -27,12 +27,3 @@ steps:
 
 - script: node -v && npm -v
   displayName: 'Check node & npm versions'
-
-- script: yarn
-  displayName: 'Install packages'
-
-- script: yarn all-check
-  displayName: 'Test, Lint, TSC'
-
-- script: yarn rollup && yarn build
-  displayName: 'Build'
