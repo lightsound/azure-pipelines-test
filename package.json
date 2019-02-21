@@ -72,11 +72,5 @@
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn all-check",
-      "pre-push": "yarn all-check"
-    }
   }
 }
